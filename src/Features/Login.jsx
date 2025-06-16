@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Nexo from "../assets/Nexo.png";
+import { useState } from "react";
 
 const LoginPage = styled.div`
   height: 100vh;
@@ -61,6 +62,16 @@ const Form = styled.form`
     background-color: inherit;
     transition: all 0.2s;
   }
+
+  &.filled label {
+    top: -6px;
+    left: 8px;
+    font-size: 1.2rem;
+    background-color: var(--background-color-dark);
+    padding: 0 1rem;
+    color: var(--text-color-secondry);
+  }
+
   & input {
     width: 100%;
     height: 5rem;
@@ -111,6 +122,7 @@ const Form = styled.form`
 `;
 
 function Login() {
+  const [phone, setPhone] = useState("");
   return (
     <LoginPage>
       <LoginContainer>
@@ -123,9 +135,9 @@ function Login() {
             Please confirm your country code and enter your phone number.
           </LoginParaGraph>
         </LoginContent>
-        <Form>
-          <label htmlFor="#phoneInput">Your Phone Number</label>
-          <input id="#phoneInput" />
+        <Form className={`${phone ? "filled" : ""}`}>
+          <label htmlFor="phoneInput">Your Phone Number</label>
+          <input id="phoneInput" onChange={(e) => setPhone(e.target.value)} />
           <button>Next</button>
         </Form>
       </LoginContainer>
