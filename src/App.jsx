@@ -1,5 +1,6 @@
 import Login from "./Features/Pages/Login";
 import OtpConfirm from "./Features/Pages/OtpConfirm";
+import AppLayout from "./Features/Ui/AppLayout";
 import GlobalStyle from "./Styles/GlobalStyle";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <>
       <GlobalStyle />
       {/* <OtpConfirm /> */}
-      <Login />
+      {/* <Login /> */}
+      <AppLayout />
     </>
   );
 }

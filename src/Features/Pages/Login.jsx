@@ -4,6 +4,10 @@ import Logo from "../Ui/Logo";
 import LoginContent from "../Ui/LoginContent";
 import LoginForm from "../Ui/LoginForm";
 
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+
+import { auth } from "../../Services/firebase";
+
 const LoginPage = styled.div`
   height: 100vh;
   width: 100vw;
@@ -28,8 +32,39 @@ const LoginContainer = styled.div`
 `;
 
 function Login() {
+  const phoneNumber = "+989922244623";
+  function generateRecaptcha() {
+    window.recaptchaVerifier = new RecaptchaVerifier(
+      auth,
+      "recaptcha-container",
+      {
+        size: "invisible",
+        callback: (response) => {
+          console.log(response);
+          // reCAPTCHA solved, allow signInWithPhoneNumber.
+        },
+      },
+      auth
+    );
+  }
+
+  function requestOtp(e) {
+    e.preventDefault();
+    generateRecaptcha();
+    let appVerifier = window.recaptchaVerifier;
+    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+      .then((confirmationResult) => {
+        window.confirmationResult = confirmationResult;
+        console.log(confirmationResult);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return (
     <LoginPage>
+      <div id="recaptcha-container" style={{ display: "none" }}></div>
       <LoginContainer>
         <Logo width="16rem" height="16rem" />
         <LoginContent
@@ -39,7 +74,9 @@ function Login() {
         <LoginForm
           id="phoneValue"
           placeHolder="Your Phone Number"
+          pattern="^09\\d{9}$"
           maxLength={11}
+          onSubmit={requestOtp}
         />
       </LoginContainer>
     </LoginPage>

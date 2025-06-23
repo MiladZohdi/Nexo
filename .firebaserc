@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "nexo-b3242"
+  },
+  "public": "build"
+}

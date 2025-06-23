@@ -4,7 +4,7 @@ const StyledHeader = styled.div`
   color: ${(props) => props.color};
   font-weight: ${(props) => props.weight};
   font-size: ${(props) => props.fontSize};
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 `;
 
 function Header({ content, weight, fontSize, color, as }) {
