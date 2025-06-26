@@ -2,14 +2,13 @@ import styled from "styled-components";
 import SideBar from "./SideBar";
 import LayoutHeader from "./LayoutHeader";
 import { useState } from "react";
-import TargetUser from "./TargetUser.jsx";
+import RightSideBar from "./RightSideBar.jsx";
 
-// Grid always has 3 columns, but user column can shrink
 const StyledAppLayout = styled.div`
   height: 100vh;
   background-color: #212121;
   display: grid;
-  grid-template-columns: 38rem 1fr 0rem; /* Last column will be animated */
+  grid-template-columns: 38rem 1fr 0rem;
   grid-template-rows: 6rem 1fr;
   grid-template-areas:
     "sidebar header targetUser"
@@ -38,7 +37,7 @@ function AppLayout() {
         <LayoutHeader />
         <Message />
         {targetUserOpen && (
-          <TargetUser handleTargetUserOpen={handleTargetUserOpen} />
+          <RightSideBar handleTargetUserOpen={handleTargetUserOpen} />
         )}
       </StyledAppLayout>
     </>

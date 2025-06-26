@@ -35,6 +35,7 @@ function LoginForm({ id, placeHolder, maxLength, pattern, onSubmit }) {
         pattern={pattern}
         onChange={(e) => setValue(e.target.value)}
         value={value}
+        labelBackground="var(--background-color-dark)"
       />
       <button>Next</button>
     </Form>
