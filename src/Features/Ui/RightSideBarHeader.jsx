@@ -24,11 +24,11 @@ const StyledRightSideBarHeader = styled.div`
   }
 `;
 
-function RightSideBarHeader({ children, handleTargetUserOpen }) {
+function RightSideBarHeader({ title, handleTargetUserOpen }) {
   return (
     <StyledRightSideBarHeader>
       <FaArrowLeft onClick={handleTargetUserOpen} />
-      {children}
+      <span>{title}</span>
     </StyledRightSideBarHeader>
   );
 }

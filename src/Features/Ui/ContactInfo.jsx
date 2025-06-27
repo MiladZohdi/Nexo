@@ -1,10 +1,8 @@
-import { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import styled from "styled-components";
 import ContactDeleteBtn from "./ContactDeleteBtn";
-import InputUserData from "./InputUserData";
-import RightSideBarHeader from "./RightSideBarHeader";
 import RightSideBarContent from "./RightSideBarContent";
+import { IoIosAt } from "react-icons/io";
 
 const ContactData = styled.div`
   display: flex;
@@ -19,28 +17,44 @@ const ContactData = styled.div`
 
 const ContactInfoRow = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.4rem;
+
+  gap: 1rem;
+
+  & svg {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
 `;
 
-function ContactInfo({ handleTargetUserOpen }) {
+function ContactInfo() {
   return (
     <>
-      <RightSideBarHeader handleTargetUserOpen={handleTargetUserOpen}>
-        <span>Contact Info</span>
-      </RightSideBarHeader>
       <RightSideBarContent>
         <FaUser />
         <span>Zoomit</span>
         <p>last seen recently</p>
         <ContactData>
           <ContactInfoRow>
-            <FaUser />
-            <p>name</p>
+            <IoIosAt />
+            <p>email</p>
           </ContactInfoRow>
-
-          <p>last name</p>
-          <p>email</p>
-          <p>username</p>
+          <ContactInfoRow>
+            <FaUser />
+            <p>username</p>
+          </ContactInfoRow>
         </ContactData>
 
         <ContactDeleteBtn />

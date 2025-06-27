@@ -11,6 +11,8 @@ const StyledHeader = styled.div`
   grid-template-columns: 8rem 1fr 10rem;
   align-items: center;
   justify-items: center;
+
+  border-bottom: 3px solid #646464;
 `;
 
 function LayoutHeader() {

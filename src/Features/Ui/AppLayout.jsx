@@ -3,9 +3,10 @@ import SideBar from "./SideBar";
 import LayoutHeader from "./LayoutHeader";
 import { useState } from "react";
 import RightSideBar from "./RightSideBar.jsx";
+import MessageBox from "./MessageBox.jsx";
 
 const StyledAppLayout = styled.div`
-  height: 100vh;
+  height: 100dvh;
   background-color: #212121;
   display: grid;
   grid-template-columns: 38rem 1fr 0rem;
@@ -20,11 +21,6 @@ const StyledAppLayout = styled.div`
   }
 `;
 
-const Message = styled.div`
-  background-color: yellow;
-  grid-area: message;
-`;
-
 function AppLayout() {
   const [targetUserOpen, setTargetUserOpen] = useState(true);
 
@@ -35,7 +31,7 @@ function AppLayout() {
       <StyledAppLayout className={targetUserOpen ? "openUser" : ""}>
         <SideBar />
         <LayoutHeader />
-        <Message />
+        <MessageBox />
         {targetUserOpen && (
           <RightSideBar handleTargetUserOpen={handleTargetUserOpen} />
         )}

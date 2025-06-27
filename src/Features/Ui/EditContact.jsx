@@ -3,7 +3,6 @@ import { FaUser } from "react-icons/fa";
 import styled from "styled-components";
 import ContactDeleteBtn from "./ContactDeleteBtn";
 import InputUserData from "./InputUserData";
-import RightSideBarHeader from "./RightSideBarHeader";
 import RightSideBarContent from "./RightSideBarContent";
 
 const EditContactDataForm = styled.form`
@@ -13,14 +12,11 @@ const EditContactDataForm = styled.form`
   width: 100%;
 `;
 
-function EditContact({ handleTargetUserOpen }) {
+function EditContact() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   return (
     <>
-      <RightSideBarHeader handleTargetUserOpen={handleTargetUserOpen}>
-        <span>Edit</span>
-      </RightSideBarHeader>
       <RightSideBarContent>
         <FaUser />
         <span>Zoomit</span>

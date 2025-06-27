@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import EditContact from "./EditContact";
+import RightSideBarHeader from "./RightSideBarHeader";
 import ContactInfo from "./ContactInfo";
 
 const StyledRightSideBar = styled.div`
@@ -15,8 +16,13 @@ const StyledRightSideBar = styled.div`
 function RightSideBar({ handleTargetUserOpen }) {
   return (
     <StyledRightSideBar>
-      {/* <EditContact handleTargetUserOpen={handleTargetUserOpen} /> */}
-      <ContactInfo handleTargetUserOpen={handleTargetUserOpen} />
+      <RightSideBarHeader
+        handleTargetUserOpen={handleTargetUserOpen}
+        // title={"Contact Info"}
+        title={"Edit"}
+      />
+      <EditContact handleTargetUserOpen={handleTargetUserOpen} />
+      {/* <ContactInfo handleTargetUserOpen={handleTargetUserOpen} /> */}
     </StyledRightSideBar>
   );
 }

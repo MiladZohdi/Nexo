@@ -35,6 +35,13 @@ const Input = styled.div`
     outline: none;
   }
 
+  & input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px ${(props) => props.background || "inherit"}
+      inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
   &:focus-within input {
     border-color: var(--foucs-color);
   }
