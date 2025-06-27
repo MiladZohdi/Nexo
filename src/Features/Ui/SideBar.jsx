@@ -7,13 +7,11 @@ import ChatsContainer from "./ChatsContainer";
 const StyledSideBar = styled.div`
   background-color: #212121;
   grid-area: sidebar;
-
   border-right: 3px solid #646464;
-
   padding: 0.6rem 0.5rem 0.6rem 1rem;
-
   display: grid;
-  grid-template-rows: 4rem 1fr;
+  grid-template-rows: 4rem auto 1fr; // header, filter, chats
+  height: 100%; // ensure it fills the parent
 `;
 
 const SideBarHeader = styled.div`

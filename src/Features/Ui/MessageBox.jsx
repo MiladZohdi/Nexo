@@ -7,17 +7,19 @@ const Message = styled.main`
   grid-area: message;
   display: grid;
   grid-template-rows: 1fr auto;
+  height: 100%; // <-- Add this
 `;
 
 const MessageList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 100%;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 1rem 5rem;
   color: #fff;
-  width: 100%;
   overflow-y: scroll;
 
   scrollbar-color: #373737 var(--background-color);
@@ -176,9 +178,9 @@ function MessageBox() {
         ))}
         <div ref={bottomRef}></div>
       </MessageList>
-      {/* <ChatInputContainer>
+      <ChatInputContainer>
         <ChatInput type="text" placeholder="Type a message..." />
-      </ChatInputContainer> */}
+      </ChatInputContainer>
     </Message>
   );
 }

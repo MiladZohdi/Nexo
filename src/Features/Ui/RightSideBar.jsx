@@ -21,8 +21,11 @@ function RightSideBar({ handleTargetUserOpen }) {
         // title={"Contact Info"}
         title={"Edit"}
       />
-      <EditContact handleTargetUserOpen={handleTargetUserOpen} />
-      {/* <ContactInfo handleTargetUserOpen={handleTargetUserOpen} /> */}
+
+      <div style={{ height: "100%", overflowY: "auto" }}>
+        <EditContact handleTargetUserOpen={handleTargetUserOpen} />
+        {/* <ContactInfo handleTargetUserOpen={handleTargetUserOpen} /> */}
+      </div>
     </StyledRightSideBar>
   );
 }
