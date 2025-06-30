@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { BiSolidSend } from "react-icons/bi";
 import { MdDone } from "react-icons/md";
 import styled from "styled-components";
 
@@ -7,14 +8,15 @@ const Message = styled.main`
   grid-area: message;
   display: grid;
   grid-template-rows: 1fr auto;
-  height: 100%; // <-- Add this
+  height: 100%;
+  overflow: hidden;
 `;
 
 const MessageList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%;
+  max-height: 85dvh;
   width: 100%;
   list-style: none;
   margin: 0;
@@ -84,13 +86,15 @@ const ChatInputContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: cneter;
+  column-gap: 1rem;
   width: 100%;
-  padding: 1rem 5rem;
+  padding: 0rem 5rem 1rem 5rem;
 `;
 
 const ChatInput = styled.input`
   width: 100%;
+  height: 5rem;
   background-color: #212121;
   border: none;
   border-radius: 2rem;
@@ -98,6 +102,28 @@ const ChatInput = styled.input`
   padding: 0 2rem;
   font-size: 1.4rem;
   outline: none;
+`;
+
+const SendBtn = styled.button`
+  background-color: red;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--foucs-color);
+  transition: 0.3s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+  & svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+  }
 `;
 
 function MessageBox() {
@@ -179,7 +205,10 @@ function MessageBox() {
         <div ref={bottomRef}></div>
       </MessageList>
       <ChatInputContainer>
-        <ChatInput type="text" placeholder="Type a message..." />
+        <ChatInput placeholder="type here" />
+        <SendBtn>
+          <BiSolidSend />
+        </SendBtn>
       </ChatInputContainer>
     </Message>
   );

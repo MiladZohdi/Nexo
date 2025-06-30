@@ -10,13 +10,12 @@ const StyledSideBar = styled.div`
   border-right: 3px solid #646464;
   padding: 0.6rem 0.5rem 0.6rem 1rem;
   display: grid;
-  grid-template-rows: 4rem auto 1fr; // header, filter, chats
-  height: 100%; // ensure it fills the parent
+  grid-template-rows: 4rem auto 1fr;
+  height: 100dvh;
 `;
-
 const SideBarHeader = styled.div`
   display: flex;
-  gap: 2.5rem;
+  column-gap: 2.5rem;
   align-items: center;
 
   & svg {
