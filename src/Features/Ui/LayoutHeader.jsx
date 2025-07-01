@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ChatPreviewLogo from "./ChatPreviewLogo";
+import ChatPreviewLogo from "./PreviewImage";
 import HeaderLogo from "./HeaderLogo";
 import HeaderContent from "./HeaderContent";
 import HeaderIconBox from "./HeaderIconBox";

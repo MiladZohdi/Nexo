@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "./Header";
 
-const StyledChatPreviewContentHeader = styled.div`
+const StyledPreviewContentHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,13 +11,13 @@ const StyledChatPreviewContentHeader = styled.div`
   }
 `;
 
-function ChatPreviewContentHeader() {
+function PreviewContentHeader() {
   return (
-    <StyledChatPreviewContentHeader>
+    <StyledPreviewContentHeader>
       <h3>Zoomit</h3>
       <p>4:22 PM</p>
-    </StyledChatPreviewContentHeader>
+    </StyledPreviewContentHeader>
   );
 }
 
-export default ChatPreviewContentHeader;
+export default PreviewContentHeader;

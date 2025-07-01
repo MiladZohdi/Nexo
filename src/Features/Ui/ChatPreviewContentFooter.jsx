@@ -1,26 +1,26 @@
 import styled from "styled-components";
 import { NotificationBox } from "./NotificationBox";
 
-const StyledChatPreviewContentFooter = styled.div`
+const StyledPreviewContentFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-const ChatPreviewMessagePreview = styled.p`
+const PreviewMessagePreview = styled.p`
   font-size: 1.3rem;
 `;
 
-function ChatPreviewContentFooter() {
+function PreviewContentFooter() {
   return (
-    <StyledChatPreviewContentFooter>
-      <ChatPreviewMessagePreview>
+    <StyledPreviewContentFooter>
+      <PreviewMessagePreview>
         Hi this is a test message for preview
-      </ChatPreviewMessagePreview>
+      </PreviewMessagePreview>
 
       <NotificationBox>5</NotificationBox>
-    </StyledChatPreviewContentFooter>
+    </StyledPreviewContentFooter>
   );
 }
 
-export default ChatPreviewContentFooter;
+export default PreviewContentFooter;

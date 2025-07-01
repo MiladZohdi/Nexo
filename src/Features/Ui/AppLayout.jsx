@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SideBar from "./SideBar";
+import LeftSideBar from "./LeftSideBar";
 import LayoutHeader from "./LayoutHeader";
 import { useState } from "react";
 import RightSideBar from "./RightSideBar.jsx";
@@ -29,7 +29,7 @@ function AppLayout() {
   return (
     <>
       <StyledAppLayout className={targetUserOpen ? "openUser" : ""}>
-        <SideBar />
+        <LeftSideBar />
         <LayoutHeader />
         <MessageBox />
         {targetUserOpen && (

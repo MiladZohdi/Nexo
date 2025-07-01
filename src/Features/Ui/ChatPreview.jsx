@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import ChatPreviewLogo from "./ChatPreviewLogo";
-import ChatPreviewContentHeader from "./ChatPreviewContentHeader";
+import PreviewImage from "./PreviewImage";
+import PreviewContentHeader from "./PreviewContentHeader";
 import ChatPreviewContentFooter from "./ChatPreviewContentFooter";
-import { ChatPreviewContent } from "./ChatPreviewContent";
+import { PreviewContent } from "./PreviewContent";
 
-const ChatPreviewContainer = styled.div`
+const ListPreviewContainer = styled.div`
   width: 100%;
   height: 6.5rem;
   padding: 0.5rem 1rem;
@@ -24,15 +24,15 @@ const ChatPreviewContainer = styled.div`
   }
 `;
 
-function ChatPreview() {
+function ChatPreview({ chat, contact }) {
   return (
-    <ChatPreviewContainer>
-      <ChatPreviewLogo />
-      <ChatPreviewContent>
-        <ChatPreviewContentHeader />
+    <ListPreviewContainer>
+      <PreviewImage />
+      <PreviewContent>
+        <PreviewContentHeader />
         <ChatPreviewContentFooter />
-      </ChatPreviewContent>
-    </ChatPreviewContainer>
+      </PreviewContent>
+    </ListPreviewContainer>
   );
 }
 

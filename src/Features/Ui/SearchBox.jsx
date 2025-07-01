@@ -46,10 +46,10 @@ const Icon = styled(IoIosSearch)`
 function SearchBox() {
   return (
     <Form>
-      <Label>
+      <Label htmlFor="search">
         <Icon />
       </Label>
-      <Input placeholder="Search" />
+      <Input placeholder="Search" id="search" />
     </Form>
   );
 }
