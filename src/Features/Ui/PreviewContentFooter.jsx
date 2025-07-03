@@ -11,14 +11,14 @@ const PreviewMessagePreview = styled.p`
   font-size: 1.3rem;
 `;
 
-function PreviewContentFooter() {
+function PreviewContentFooter({ type }) {
   return (
     <StyledPreviewContentFooter>
       <PreviewMessagePreview>
         Hi this is a test message for preview
       </PreviewMessagePreview>
 
-      <NotificationBox>5</NotificationBox>
+      {type === "chat" ? <NotificationBox>5</NotificationBox> : ""}
     </StyledPreviewContentFooter>
   );
 }

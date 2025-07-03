@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import PreviewImage from "./PreviewImage";
 import PreviewContentHeader from "./PreviewContentHeader";
-import ChatPreviewContentFooter from "./ChatPreviewContentFooter";
+import PreviewContentFooter from "./PreviewContentFooter";
 import { PreviewContent } from "./PreviewContent";
 
-const ListPreviewContainer = styled.div`
+const StyledChatPreviewContainer = styled.div`
   width: 100%;
   height: 6.5rem;
   padding: 0.5rem 1rem;
@@ -24,16 +24,16 @@ const ListPreviewContainer = styled.div`
   }
 `;
 
-function ChatPreview({ chat, contact }) {
+function Preview({ type }) {
   return (
-    <ListPreviewContainer>
+    <StyledChatPreviewContainer>
       <PreviewImage />
       <PreviewContent>
-        <PreviewContentHeader />
-        <ChatPreviewContentFooter />
+        <PreviewContentHeader type={type} />
+        <PreviewContentFooter type={type} />
       </PreviewContent>
-    </ListPreviewContainer>
+    </StyledChatPreviewContainer>
   );
 }
 
-export default ChatPreview;
+export default Preview;

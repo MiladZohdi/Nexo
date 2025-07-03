@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import LeftSideBarChatList from "./LeftSideBarChatList";
-import ContactList from "./ContactList";
+import PreviewList from "./PreviewList";
 
 const StyledLeftSideBar = styled.div`
   background-color: #212121;
@@ -15,8 +14,7 @@ const StyledLeftSideBar = styled.div`
 function LeftSideBar() {
   return (
     <StyledLeftSideBar>
-      {/* <LeftSideBarChatList /> */}
-      <ContactList />
+      <PreviewList type="chat" />
     </StyledLeftSideBar>
   );
 }

@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import ChatPreviewLogo from "./PreviewImage";
-import HeaderLogo from "./HeaderLogo";
-import HeaderContent from "./HeaderContent";
-import HeaderIconBox from "./HeaderIconBox";
+import LayoutHeaderLogo from "./LayoutHeaderLogo";
+import LayoutHeaderContent from "./LayoutHeaderContent";
+import LayoutHeaderIconBox from "./LayoutHeaderIconBox";
 
 const StyledHeader = styled.div`
   background-color: #212121;
@@ -18,9 +17,9 @@ const StyledHeader = styled.div`
 function LayoutHeader() {
   return (
     <StyledHeader>
-      <HeaderLogo />
-      <HeaderContent />
-      <HeaderIconBox />
+      <LayoutHeaderLogo />
+      <LayoutHeaderContent />
+      <LayoutHeaderIconBox />
     </StyledHeader>
   );
 }

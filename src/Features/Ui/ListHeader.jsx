@@ -1,8 +1,9 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import styled from "styled-components";
 import SearchBox from "./SearchBox";
+import { FaArrowLeft } from "react-icons/fa";
 
-const StyledLeftSideBarHeader = styled.div`
+const StyledListHeader = styled.div`
   display: flex;
   column-gap: 2.5rem;
   align-items: center;
@@ -14,14 +15,13 @@ const StyledLeftSideBarHeader = styled.div`
   }
 `;
 
-function LeftSideBarChatsHeader() {
+function ListHeader({ type }) {
   return (
-    <StyledLeftSideBarHeader>
-      <GiHamburgerMenu />
-      {/* <SettingsDropDown /> */}
+    <StyledListHeader>
+      {type === "chat" ? <GiHamburgerMenu /> : <FaArrowLeft />}
       <SearchBox />
-    </StyledLeftSideBarHeader>
+    </StyledListHeader>
   );
 }
 
-export default LeftSideBarChatsHeader;
+export default ListHeader;

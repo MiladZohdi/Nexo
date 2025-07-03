@@ -11,11 +11,11 @@ const StyledPreviewContentHeader = styled.div`
   }
 `;
 
-function PreviewContentHeader() {
+function PreviewContentHeader({ type }) {
   return (
     <StyledPreviewContentHeader>
       <h3>Zoomit</h3>
-      <p>4:22 PM</p>
+      {type === "contact" ? "" : <p>4:22 PM</p>}
     </StyledPreviewContentHeader>
   );
 }

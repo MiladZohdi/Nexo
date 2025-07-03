@@ -2,7 +2,7 @@ import { HiDotsVertical } from "react-icons/hi";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
 import styled from "styled-components";
 
-const StyledHeaderIconBox = styled.div`
+const StyledLayoutHeaderIconBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -22,13 +22,13 @@ const StyledHeaderIconBox = styled.div`
   }
 `;
 
-function HeaderIconBox() {
+function LayoutHeaderIconBox() {
   return (
-    <StyledHeaderIconBox>
+    <StyledLayoutHeaderIconBox>
       <PiMagnifyingGlassBold />
       <HiDotsVertical />
-    </StyledHeaderIconBox>
+    </StyledLayoutHeaderIconBox>
   );
 }
 
-export default HeaderIconBox;
+export default LayoutHeaderIconBox;

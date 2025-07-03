@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledChatFilterTab = styled.div`
+const StyledChatsListFilter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,14 +25,14 @@ const StyledChatFilterTab = styled.div`
   }
 `;
 
-function ChatFilterTab() {
+function ChatsListFilter() {
   return (
-    <StyledChatFilterTab>
+    <StyledChatsListFilter>
       <button>All</button>
       <button>Private</button>
       <button>Unread</button>
-    </StyledChatFilterTab>
+    </StyledChatsListFilter>
   );
 }
 
-export default ChatFilterTab;
+export default ChatsListFilter;

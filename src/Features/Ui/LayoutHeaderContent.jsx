@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledHeaderContet = styled.div`
+const StyledLayoutHeaderContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-self: start;
@@ -14,13 +14,13 @@ const StyledHeaderContet = styled.div`
     font-size: 1.4rem;
   }
 `;
-function HeaderContent() {
+function LayoutHeaderContent() {
   return (
-    <StyledHeaderContet>
+    <StyledLayoutHeaderContent>
       <h2>Zoomit</h2>
       <p>last seen 6/18/2025</p>
-    </StyledHeaderContet>
+    </StyledLayoutHeaderContent>
   );
 }
 
-export default HeaderContent;
+export default LayoutHeaderContent;
