@@ -4,6 +4,7 @@ import LayoutHeader from "./LayoutHeader";
 import { useState } from "react";
 import RightSideBar from "./RightSideBar.jsx";
 import MessageBox from "./MessageBox.jsx";
+import AddContact from "./AddContact.jsx";
 
 const StyledAppLayout = styled.div`
   height: 100dvh;
@@ -35,6 +36,7 @@ function AppLayout() {
         {targetUserOpen && (
           <RightSideBar handleTargetUserOpen={handleTargetUserOpen} />
         )}
+        {/* <AddContact /> */}
       </StyledAppLayout>
     </>
   );

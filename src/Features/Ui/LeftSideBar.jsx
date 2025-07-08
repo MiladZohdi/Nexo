@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import PreviewList from "./PreviewList";
+import EditUser from "./EditUser";
 
 const StyledLeftSideBar = styled.div`
   background-color: #212121;
@@ -14,7 +15,8 @@ const StyledLeftSideBar = styled.div`
 function LeftSideBar() {
   return (
     <StyledLeftSideBar>
-      <PreviewList type="chat" />
+      <PreviewList type="contact" />
+      {/* <EditUser /> */}
     </StyledLeftSideBar>
   );
 }

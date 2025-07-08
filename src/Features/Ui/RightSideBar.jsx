@@ -23,7 +23,7 @@ function RightSideBar({ handleTargetUserOpen }) {
       />
 
       <div style={{ height: "100%", overflowY: "auto" }}>
-        <EditContact handleTargetUserOpen={handleTargetUserOpen} />
+        {/* <EditContact handleTargetUserOpen={handleTargetUserOpen} /> */}
         <ContactInfo handleTargetUserOpen={handleTargetUserOpen} />
       </div>
     </StyledRightSideBar>
